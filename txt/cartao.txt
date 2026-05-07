@@ -1,0 +1,49 @@
+def analisar_cartao(renda, limite):
+    print("\n💳 Análise do Cartão de Crédito:")
+
+    porcentagem = (limite / renda) * 100
+    print(f"Seu limite representa {porcentagem:.1f}% da sua renda.")
+
+    if limite > renda:
+        print("🚨 Risco alto: limite maior que sua renda!")
+    elif limite > renda * 0.5:
+        print("⚠️ Atenção: limite elevado.")
+    else:
+        print("✔️ Limite saudável.")
+
+    print("\n💡 Dica: evite usar mais de 30% do limite mensalmente.")
+------------------------------------------------
+def analisar_cartao(renda, limite):
+    porcentagem = (limite / renda) * 100
+
+    if limite > renda:
+        status = "Risco alto: limite maior que a renda"
+    elif limite > renda * 0.5:
+        status = "Atenção: limite elevado"
+    else:
+        status = "Limite saudável"
+
+    return {
+        "porcentagem": porcentagem,
+        "status": status,
+        "dica": "Evite usar mais de 30% do limite"
+    }
+
+    -------
+    Versão 2 
+
+    def analisar_cartao(renda, limite):
+    porcentagem = (limite / renda) * 100
+
+    if limite > renda:
+        status = "Risco alto: limite maior que a renda"
+    elif limite > renda * 0.5:
+        status = "Atenção: limite elevado"
+    else:
+        status = "Limite saudável"
+
+    return {
+        "porcentagem": porcentagem,
+        "status": status,
+        "dica": "Evite usar mais de 30% do limite"
+    }
